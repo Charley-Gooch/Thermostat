@@ -13,14 +13,19 @@
     </style>
     <h1>Thermostat</h1>
   </head>
-  <body style="text-align: center" onload="createThermo();">
+  <body style="text-align: center">
     <div id="containerTable">
+        <br>
         -----------<br>
         hello there<br>
         -----------<br>
-        <script type="javascript">
-                document.getElementById('containerTable').innerHTML += "Temperature: " + getTemp() + "<br>";
+        <br>
+        <script type="text/javascript">
+                createThermo();
+                document.getElementById('containerTable').innerHTML += "Temperature: " + getTemp() + " ";
         </script>
+        Degrees<br>
+        &#x2028 <!------ unicode for newline to create border without using 'borders' (div background) ------->
     </div>
   </body>
 </html>

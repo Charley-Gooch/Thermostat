@@ -5,14 +5,15 @@ var thermo = null;
 function Thermo(){
 }
 
-function getTemp(){
-    return thermo.temp;
-}
-
 function createThermo(){
     thermo = new Thermo();
     thermo.init();
 }
+
+function getTemp(){
+    return thermo.temp;
+}
+
 Thermo.prototype.init = function() {
     thermo.temp = 20;
 }
