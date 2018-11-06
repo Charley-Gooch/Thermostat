@@ -2,7 +2,15 @@
   <head style="text-align: center">
     <script src="../javascript/index.js"></script>
     <style>
-        div#containerTable {
+        div#containerTitle {
+            left: 50%;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #003366;
+            color:white;
+        }
+        div#thermo {
             left: 50%;
             width: 50%;
             margin-left: auto;
@@ -14,18 +22,25 @@
     <h1>Thermostat</h1>
   </head>
   <body style="text-align: center">
-    <div id="containerTable">
+    <div id="containerTitle">
         <br>
         -----------<br>
         hello there<br>
         -----------<br>
         <br>
+        <div id="thermo">
         <script type="text/javascript">
                 createThermo();
-                document.getElementById('containerTable').innerHTML += "Temperature: " + getTemp() + " ";
+                document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
         </script>
+        </div>
         Degrees<br>
-        &#x2028 <!------ unicode for newline to create border without using 'borders' (div background) ------->
+        <button onclick="thermo.increaseTemp()" id="upTemp">Increase Temperature</button><button onclick="thermo.decreaseTemp();" id="downTemp">Decrease Temperature</button>
+        <br>
+        <button onclick="thermo.resetTemp()" id="resTemp">Reset Temperature</button>
+        <br>
+        &#x2028 <!-- unicode for newline to create border without using 'borders' (div background) -->
+        
     </div>
   </body>
 </html>

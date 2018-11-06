@@ -1,5 +1,5 @@
 var temp = 0;
-var powerSaver = false;
+var powerSaver = true;
 var thermo = null;
 
 function Thermo(){
@@ -24,12 +24,15 @@ Thermo.prototype.increaseTemp = function() {
             alert("With power saver enabled, maximum temperature is 25 degrees. To increase, please disable power saver");
         }else{
             thermo.temp += 1;
+            document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
         }
     }else{
         if(thermo.temp == 32) {
             alert("Maximum temperature is 32 degrees.");
         }else{ 
             thermo.temp += 1;
+            document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
+            
         }
     }
 }
@@ -39,6 +42,7 @@ Thermo.prototype.decreaseTemp = function() {
         alert("Minimum temperature is 10 degrees.");
     }else{
         thermo.temp -= 1;
+        document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
     }
 }
 
@@ -47,6 +51,7 @@ Thermo.prototype.togglePowerSaver = function() {
         powerSaver == true;
         if(thermo.temp > 25){
             thermo.temp = 25;
+            document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
         }
     }else{
         powerSaver == false;
@@ -55,6 +60,7 @@ Thermo.prototype.togglePowerSaver = function() {
 
 Thermo.prototype.resetTemp = function() {
     thermo.temp = 20;
+    document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
 }
 
 Thermo.prototype.getEnergyUsage = function(){
