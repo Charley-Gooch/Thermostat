@@ -1,19 +1,26 @@
 <html>
   <head style="text-align: center">
+    <script src="../javascript/index.js"></script>
     <style>
         div#containerTable {
             left: 50%;
             width: 50%;
             margin-left: auto;
             margin-right: auto;
-            color: #003366;
+            background-color: #003366;
+            color:white;
         }
     </style>
     <h1>Thermostat</h1>
   </head>
-  <body style="text-align: center">
+  <body style="text-align: center" onload="createThermo();">
     <div id="containerTable">
-        hello there
+        -----------<br>
+        hello there<br>
+        -----------<br>
+        <script type="javascript">
+            document.write(getTemp());
+        </script>
     </div>
   </body>
 </html>

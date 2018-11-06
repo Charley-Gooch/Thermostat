@@ -1,4 +1,4 @@
-# Thermostat App
+# Thermostat App [WIP]
 
 Using:
 * HTML

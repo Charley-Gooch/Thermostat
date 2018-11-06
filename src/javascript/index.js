@@ -1,6 +1,17 @@
 var temp = null;
 var powerSaver = false;
+var thermo = null;
 
+function Thermo(){}
+
+function getTemp(){
+    return temp;
+}
+
+function createThermo(){
+    thermo = new Thermo();
+    thermo.init();
+}
 Thermo.prototype.init = function() {
     temp = 20;
 }
