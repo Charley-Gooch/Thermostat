@@ -1,6 +1,6 @@
 div#containerTitle {
     left: 50%;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     background-color: #003366;
@@ -9,7 +9,7 @@ div#containerTitle {
 
 div#thermo {
     left: 50%;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     background-color: #003366;
@@ -18,9 +18,13 @@ div#thermo {
 
 div#powSav {
     left: 50%;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     background-color: #003366;
     color:white;
+}
+
+body {
+    text-align: center;
 }

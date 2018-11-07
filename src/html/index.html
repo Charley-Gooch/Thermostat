@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <h1>Thermostat</h1>
   </head>
-  <body style="text-align: center">
+  <body id="body">
     <div id="containerTitle">
         <br>
         -----------<br>
@@ -28,6 +28,12 @@
         <br>
         <button onclick="thermo.resetTemp()" id="resTemp">Reset Temperature</button><button onclick="thermo.togglePowerSaver();" id="togPowerSave">Toggle Power Saver</button>
         <br>
+        <br>
+        <div id="usage">
+            <script>
+                    getEnergyUsage();
+            </script>
+        </div>
         &#x2028 <!-- unicode for newline to create border without using 'borders' (div background) -->
     </div>
   </body>

@@ -40,6 +40,7 @@ Thermo.prototype.increaseTemp = function() {
             
         }
     }
+    getEnergyUsage();
 }
 
 Thermo.prototype.decreaseTemp = function() {
@@ -48,6 +49,7 @@ Thermo.prototype.decreaseTemp = function() {
     }else{
         thermo.temp -= 1;
         document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " Degrees";
+        getEnergyUsage();
     }
 }
 
@@ -57,6 +59,7 @@ Thermo.prototype.togglePowerSaver = function() {
         if(thermo.temp > 25){
             thermo.temp = 25;
             document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " Degrees";
+            getEnergyUsage();
         }
     }else if(thermo.powerSaver == true){
         thermo.powerSaver = false;
@@ -67,14 +70,15 @@ Thermo.prototype.togglePowerSaver = function() {
 Thermo.prototype.resetTemp = function() {
     thermo.temp = 20;
     document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " Degrees";
+    getEnergyUsage();
 }
 
-Thermo.prototype.getEnergyUsage = function(){
+function getEnergyUsage(){
     if(thermo.temp < 18) {
-        return 'L'
+        document.getElementById('usage').innerHTML = "Current Power Usage: Low";
     } else if(thermo.temp < 25) {
-        return 'M'
+        document.getElementById('usage').innerHTML = "Current Power Usage: Moderate";
     } else {
-        return 'H'
+        document.getElementById('usage').innerHTML = "Current Power Usage: High";
     }
 }
