@@ -1,24 +1,7 @@
 <html>
   <head style="text-align: center">
     <script src="../javascript/index.js"></script>
-    <style>
-        div#containerTitle {
-            left: 50%;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #003366;
-            color:white;
-        }
-        div#thermo {
-            left: 50%;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #003366;
-            color:white;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/index.css">
     <h1>Thermostat</h1>
   </head>
   <body style="text-align: center">
@@ -31,16 +14,21 @@
         <div id="thermo">
         <script type="text/javascript">
                 createThermo();
-                document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " ";
+                document.getElementById('thermo').innerHTML = "Temperature: " + getTemp() + " Degrees";
         </script>
+        <br>
         </div>
-        Degrees<br>
+        <div id="powSav">
+            <script type="text/javascript">
+                document.getElementById('powSav').innerHTML = "Power Saver Status: " + getPowerSaver() + " ";
+            </script>
+        </div>
+        <br>
         <button onclick="thermo.increaseTemp()" id="upTemp">Increase Temperature</button><button onclick="thermo.decreaseTemp();" id="downTemp">Decrease Temperature</button>
         <br>
-        <button onclick="thermo.resetTemp()" id="resTemp">Reset Temperature</button>
+        <button onclick="thermo.resetTemp()" id="resTemp">Reset Temperature</button><button onclick="thermo.togglePowerSaver();" id="togPowerSave">Toggle Power Saver</button>
         <br>
         &#x2028 <!-- unicode for newline to create border without using 'borders' (div background) -->
-        
     </div>
   </body>
 </html>

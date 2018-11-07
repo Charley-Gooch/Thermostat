@@ -1,0 +1,26 @@
+div#containerTitle {
+    left: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #003366;
+    color:white;
+}
+
+div#thermo {
+    left: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #003366;
+    color:white;
+}
+
+div#powSav {
+    left: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #003366;
+    color:white;
+}
